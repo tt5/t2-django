@@ -25,12 +25,13 @@ SECRET_KEY = 'django-insecure-*5@dv_l9xr#a)7$3qt9#$kj5v2vl0pz2+mc0^^m31ysikmh_uw
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
 
 INSTALLED_APPS = [
+    'sample',
     'corsheaders',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -122,13 +123,14 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
-STATIC_URL = '/static/'
+STATIC_URL = '/static/dist/'
 
 # Where ViteJS assets are built.
 DJANGO_VITE_ASSETS_PATH = BASE_DIR / "static" / "dist"
 
 # If use HMR or not.
-DJANGO_VITE_DEV_MODE = DEBUG
+#DJANGO_VITE_DEV_MODE = DEBUG
+DJANGO_VITE_DEV_MODE = False
 
 # Name of static files folder (after called python manage.py collectstatic)
 STATIC_ROOT = "collectedstatic"

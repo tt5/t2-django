@@ -1,3 +1,4 @@
 import '../css/style.css';
+import Alpine from 'alpinejs'
 
-alert('Hello from Django Vite example !');
+Alpine.start()
